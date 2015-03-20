@@ -2,18 +2,18 @@
 ## information within itself. In the example, this
 ## information will be the inverse of the matix
 
-makeCacheMatrix <- function(currentMatrix = matrix()) {
+makeCacheMatrix <- function(x = matrix()) {
     ## This variable will hold the cached value
     cacheMatrix <- NULL
     
     list(
         set = function(newMatrix) {
             ## reset the object
-            currentMatrix <<- newMatrix
+            x <<- newMatrix
             cacheMatrix <<- NULL
         },
         get = function() {
-            currentMatrix
+            x
         },
         setCachedInverse = function(inverse) {
             cacheMatrix <<- inverse
